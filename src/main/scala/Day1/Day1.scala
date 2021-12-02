@@ -1,13 +1,13 @@
 package Day1
 
+import aoc.AoCUtils.parse_input
+
 import scala.annotation.tailrec
 import scala.io.Source
 
 object Day1 extends App{
-  def parse_input(): List[Int] =
-    (for (x <- Source.fromFile("/Users/julia.reynolds/Workspace/AdventOfCode-2021-scala/src/main/scala/Day1/input.txt").getLines()) yield x.toInt).toList
 
-  val inputList = parse_input()
+  val inputList = parse_input("/Users/julia.reynolds/Workspace/aoc-scala-2021/src/main/scala/Day1/input.txt")
   var countIncreases: Int = 0
   var count3Increases: Int = 0
   var lastSum: Int = 0
