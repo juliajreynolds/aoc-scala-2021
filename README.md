@@ -9,3 +9,5 @@ Day 3:  list.filter!
 Day 4:  matrix and foldleft
 
 Day 5:  range, for/yield
+
+Day 6:  memoization, 
