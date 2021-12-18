@@ -1,5 +1,6 @@
 package aoc
 
+import scala.collection.mutable.ArrayBuffer
 import scala.io.Source
 
 object AoCUtils {
@@ -18,7 +19,12 @@ object AoCUtils {
   def parse_string_input(filePath: String): List[String] =
     (for (x <- Source.fromFile(filePath).getLines()) yield x.toString).toList
 
-
+  def parseData(filePath: String): ArrayBuffer[Array[Int]] = {
+    val bufferedSource =  Source.fromFile(filePath).getLines()
+    val arrayOfArrays = ArrayBuffer[Array[Int]]()
+    bufferedSource.foreach(line => arrayOfArrays += line.trim.split("").map(_.toInt))
+    arrayOfArrays
+  }
 
 
 }
